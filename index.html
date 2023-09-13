@@ -31,17 +31,27 @@
     <main>
         <h1>Аренда круизной яхты <em>Sea Ray 240</em></h1>
         <section>
-            <p>Самые красивые прогулки по рекам и каналам Санкт-Петербурга. Причалы в разных точках города. Опытный капитан</p>
+            <strong>Самые красивые прогулки по рекам и каналам Санкт-Петербурга. Причалы в разных точках города. Опытный капитан</strong>
         </section>
 
-        <section>
-            выберите маршрут или придумайте сами
-        </section>
-        <section>
-            мероприятия на нашей яхте
-        </section>
-        <section>
-            фото яхты
+        <section class="booking-form">
+            <h2>Забронировать прогулку</h2>
+            <form action="#">
+                <div class="input">
+                    <input type="text" placeholder="Имя">
+                    <input type="text" placeholder="Фамилия">
+                    <input type="text" placeholder="E-mail">
+                    <input type="text" placeholder="Телефон">
+                </div>
+                <div class="input-date-time">
+                    <label><span>Время</span><input type="text"></label>
+                    <label><span>Дата</span><input type="text" id="datepicker"></label>
+                </div>
+                <div class="submit_button">
+                    <input type="submit" value="Отправить">
+                </div>
+            </form>
+
         </section>
         <aside class="work-time">
             работаем с мая по сентябрь

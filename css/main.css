@@ -1,28 +1,27 @@
 
+html {
+    height: auto;
+    width: auto;
+}
 header {
     text-align: justify;
     padding: 1em;
     box-shadow: inset 0 0 0 1000px rgba(255,255,255,.1);
     color: #fff;
-
 }
 
-
 .backgroundImg {
-    background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url("../img/backgroundMain.jpg") no-repeat;
+    background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url("../img/newBackgroundMain.jpg") no-repeat;
     background-size: 100% ;
 }
 
-
-
-
  header .logo-img {
      left: 20px;
-     margin: 0;
-     position: -webkit-sticky;
+     margin: -10px;
      position: sticky;
-     Width: 100px;
+     Width: 80px;
      height: auto;
+     background:  rgba(0, 0, 0, 0);
 }
 
 .nav-menu {
@@ -30,6 +29,7 @@ header {
     top: 1.6em;
     padding: 0.2em;
     left: 200px;
+    margin: 0;
 }
 
 .nav-menu ul {
@@ -37,7 +37,7 @@ header {
     display: block;
     width: 800px;
     height: 30px;
-    margin: 0 auto 30px;
+    margin: 0;
     padding: 1em;
 }
 
@@ -101,7 +101,6 @@ main {
     right: 30px;
     font-weight: bolder;
     font-size: x-large;
-
     color: white;
 }
 
@@ -199,7 +198,6 @@ footer .logo-img {
 }
 
 .nav-menu-footer ul {
-
 
 }
 

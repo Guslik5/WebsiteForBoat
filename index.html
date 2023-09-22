@@ -5,106 +5,75 @@
     <title>Аренда катера Спб</title>
     <meta name="keywords" content="аренда, катер, яхта, спб, санкт-петербург ">
     <meta name="description" content="Аренда яхты в Санкт-Петербурге по выгодной цене!">
+    <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body class="backgroundImg">
+
     <header>
-        <a>лого</a>
-        <pre>
-            ┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉
-            ┉┉┉┉┉┉┉┉┉▃▅▇┉┉┉┉
-            ┉┉┉┉┉╱▔▔▔▔▔▔▏┉┉┉
-            ▂▂▂┉╱▔▔▔▔▔▉▔┉┉┉┉
-            ┉╲▔▔▔▔▔▔▔▔▔▔▔▔▔▏
-            ┉┉╲▂▂▂▂▂▂▂▂▂▂▂╱┉
-            ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
-        </pre>
-        <ul>
-            <li><a>Главная</a></li>
-            <li><a>О нас</a></li>
-            <li><a>Цены</a></li>
-            <li><a>Отзывы</a></li>
-            <li><a>Где нас найти</a></li>
-        </ul>
-        <aside>
-            <h2><i>8 (962) 684-51-99</i></h2>
-            <h3>Заказать обратный звонок</h3>
+        <img class="logo-img" src="img/logo.png" alt="logo">
+        <div class="nav-menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="info.html">О нас</a></li>
+                <li><a href="prices.html">Цены</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="location.html">Где нас найти</a></li>
+            </ul>
+        </div>
+        <aside class="telephone">
+            <i>8 (962) 684-51-99</i>
+            <a href="#">Заказать обратный звонок</a>
         </aside>
     </header>
     <main>
         <h1>Аренда круизной яхты <em>Sea Ray 240</em></h1>
         <section>
-            <p>Самые красивые прогулки по рекам и каналам Санкт-Петербурга. Причалы в разных точках города. Опытный капитан</p>
+            <strong>Самые красивые прогулки по рекам и каналам Санкт-Петербурга. Причалы в разных точках города. Опытный капитан</strong>
         </section>
-        <section>
-            <pre>
-                ░░░░░░░░░░░░░░░▄▄░░░░░░░░░░░░░░░
-                ░░░░░░░░░░░░░░████░░░░░░░░░░░░░░
-                ░░░░░░░░░░░░░░████░░░░░░░░░░░░░░
-                ░░░░░▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄░░░░░
-                ░░░░░██░░░░░░░░░░░░░░░░░░██░░░░░
-                ░░░░░██▄▄░░▄▄░░▄▄░░▄▄░░▄▄██░░░░░
-                ░░░░░░░▀█░░██░░██░░██░░█▀░░░░░░░
-                ░░░░░░░░█░░░░░░░░░░░░░░█░░░░░░░░
-                ░░░░░░░░▀░▄▄▄██░░██▄▄▄░▀░░░░░░░░
-                ░░░░▄▄▄████████░░████████▄▄▄░░░░
-                ░░░████████████░░████▀███████░░░
-                ░░░░███████████░░███▄░▄█████░░░░
-                ░░░░░██████████░░██▀█░█▀███░░░░░
-                ░░░░░░█████████░░███▄▄▄███░░░░░░
-                ░░░░░░░████████░░████████░░░░░░░
-                ░░░░░░░▀░░░▀██▀░░▀██▀░░░▀░░░░░░░
-                ▄▄███▄▄▄███▄▄▄▄██▄▄▄▄███▄▄▄███▄▄
-                ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-            </pre>
+
+        <section class="booking-form">
+            <h2>Забронировать прогулку</h2>
+            <form action="#">
+                <div class="input">
+                    <input type="text" placeholder="Имя">
+                    <input type="text" placeholder="Фамилия">
+                    <input type="text" placeholder="E-mail">
+                    <input type="text" placeholder="Телефон">
+                </div>
+                <div class="input-date-time">
+                    <label><span>Время</span><input type="time"></label>
+                    <label><span>Дата</span><input type="date" id="datepicker"></label>
+                </div>
+                <div class="submit_button">
+                    <input type="submit" value="Отправить">
+                </div>
+            </form>
         </section>
-        <aside>
-            Наши соц сети
-            <ul>
-                <li>телеграм</li>
-                <li>вк</li>
-                <li>инста</li>
-            </ul>
-        </aside>
-        <section>
-            выберите маршрут или придумайте сами
-        </section>
-        <section>
-            мероприятия на нашей яхте
-        </section>
-        <section>
-            фото яхты
-        </section>
-        <aside>
+
+        <aside class="work-time">
             работаем с мая по сентябрь
         </aside>
+
     </main>
     <footer>
-        <aside>
-            лого
-        </aside>
-        <pre>
-            ┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉
-            ┉┉┉┉┉┉┉┉┉▃▅▇┉┉┉┉
-            ┉┉┉┉┉╱▔▔▔▔▔▔▏┉┉┉
-            ▂▂▂┉╱▔▔▔▔▔▉▔┉┉┉┉
-            ┉╲▔▔▔▔▔▔▔▔▔▔▔▔▔▏
-            ┉┉╲▂▂▂▂▂▂▂▂▂▂▂╱┉
-            ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
-        </pre>
-        <section>
-            <a>Контакты</a>
+        <img class="logo-img" src="img/logo.png" alt="logo">
+
+        <section class="nav-menu-footer">
             <ul>
-                <li>Телефон 1</li>
-                <li>Телефон 2</li>
-                <li>Телефон 3</li>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="info.html">О нас</a></li>
+                <li><a href="prices.html">Цены</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="location.html">Где нас найти</a></li>
             </ul>
         </section>
-        <section>
-            <a>Наши соц сети</a>
-            <ul>
-                <li>телеграмм</li>
-                <li>вк</li>
-                <li>инста</li>
+
+        <section class="social-networks">
+            <ul class="social-icons">
+                <li><a class="social-icon-vk" href="https://vk.com/public211513707" title="VK"></a></li>
+                <li><a class="social-icon-telegram" href="https://vk.com/public211513707" title="Telegram"></a></li>
+                <li><a class="social-icon-instagram" href="https://vk.com/public211513707" title="Instagram"></a></li>
+                <li><a class="social-icon-whatsup" href="https://vk.com/public211513707" title="Whats up"></a></li>
             </ul>
         </section>
 

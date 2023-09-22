@@ -1,58 +1,70 @@
-
-html {
-    height: auto;
-    width: auto;
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
 }
-header {
-    text-align: justify;
-    padding: 1em;
-    box-shadow: inset 0 0 0 1000px rgba(255,255,255,.1);
-    color: #fff;
+
+@media (max-width: 900px){
+    .nav-menu {
+        flex-direction: column;
+        font-weight: lighter;
+        font-size: small;
+    }
+    header aside a{
+        opacity: 0;
+    }
+    .telephone {
+        background-image: url("../img/call.png");
+        background-size: 50px;
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
 }
 
 .backgroundImg {
     background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url("../img/newBackgroundMain.jpg") no-repeat;
-    background-size: 100% ;
+    background-size: 100% 27%;
 }
 
- header .logo-img {
-     left: 20px;
-     margin: -10px;
-     position: sticky;
-     Width: 80px;
-     height: auto;
-     background:  rgba(0, 0, 0, 0);
+html {
+    height: 3000px;
+    width: auto;
+
+
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    text-align: justify;
+    background-color: rgba(255,255,255,.1);
+    color: #fff;
+}
+
+header .logo-img {
+    left: 100px;
+    Width: 80px;
+    height: auto;
+    background:  rgba(0, 0, 0, 0);
 }
 
 .nav-menu {
-    position: absolute;
-    top: 1.6em;
-    padding: 0.2em;
-    left: 200px;
-    margin: 0;
-}
-
-.nav-menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px;
     list-style: none;
-    display: block;
-    width: 800px;
-    height: 30px;
     margin: 0;
-    padding: 1em;
+
 }
 
 .nav-menu a {
     text-decoration: none;
-    padding: 1em;
     color: black;
-    margin-top: 10px;
-    margin-right: 10px;
     font-weight: bolder;
     font-size: x-large;
-}
-
-.nav-menu li {
-    display: inline-block;
 }
 
 .nav-menu a:hover {
@@ -60,38 +72,36 @@ header {
 }
 
 .telephone {
-    position: absolute;
     top: 15px;
-    padding: 10px;
     right: 100px;
-}
-
-.telephone i {
-    display: block;
+    padding: 10px;
     font-weight: bolder;
-    font-size: x-large;
-    padding: 1px;
-    color: white;
-}
-
-.telephone a:hover {
-    background-color: black;
+    font-size: 20px;
+    white-space: nowrap;
 }
 
 .telephone a {
     text-decoration: none;
     color: white;
-    border: 1px solid white;
     list-style: none;
 }
 
+.telephone a:hover {
+    text-decoration: underline;
+}
+
 main {
+    height: 2500px;
 }
 
 .booking-form{
-    background-color: white;
-    border: 5px solid blue;
+    display: inline-flex;
+    color: black;
+    width: 600px;
+    box-shadow: inset 0 0 0 1000px rgba(255,255,255,.1);
+}
 
+.input{
 
 }
 
@@ -105,12 +115,11 @@ main {
 }
 
 footer {
+    display: flex;
     position: absolute;
     left: 0;
-    bottom: 0;
     width: 100%;
     height: 100px;
-    display: block;
     background-color: #262626;
     color: #fff;
     border: 0;
@@ -119,12 +128,10 @@ footer {
 }
 
 footer .logo-img {
-    bottom:20px;
-    right:0px;
-    left:20px;
-    position:fixed;
-    Width: 100px;
+    left: 100px;
+    Width: 80px;
     height: auto;
+    background:  rgba(0, 0, 0, 0);
 
 }
 
@@ -189,28 +196,3 @@ footer .logo-img {
 .social-icons .social-icon-whatsup::before {
     background-image: url("../img/icon-whatsUp.png");
 }
-
-.nav-menu-footer {
-    position: absolute;
-    left: 200px;
-    bottom: 20px;
-
-}
-
-.nav-menu-footer ul {
-
-}
-
-.nav-menu-footer li {
-    display: inline-block;
-
-}
-
-.nav-menu-footer a {
-    list-style: none;
-    text-decoration: none;
-    color: white;
-    margin: 2em;
-
-}
-

@@ -3,24 +3,6 @@
     margin: 0;
 
 }
-
-@media (max-width: 900px){
-    .nav-menu {
-        flex-direction: column;
-        font-weight: lighter;
-        font-size: small;
-    }
-    header aside a{
-        opacity: 0;
-    }
-    .telephone {
-        background-image: url("../img/call.png");
-        background-size: 50px;
-        background-repeat: no-repeat;
-        background-position: top center;
-    }
-}
-
 .backgroundImg {
     background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url("../img/newBackgroundMain.jpg") no-repeat;
     background-size: 100% 100%;
@@ -28,6 +10,7 @@
 
 header {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     position: sticky;
     top: 0;
@@ -44,30 +27,97 @@ header .logo-img {
     background:  rgba(0, 0, 0, 0);
 }
 
-.nav-menu {
-    display: flex;
+nav{
+    padding: 20px 5px;
+    color: #fff;
+}
+
+nav li{
+    display: inline-flex;
     justify-content: space-between;
-    align-items: center;
-    width: 1000px;
-    list-style: none;
-    margin: 0;
-
-}
-
-.nav-menu a {
-    text-decoration: none;
-    color: black;
-    font-weight: bolder;
+    vertical-align: center;
+    padding: 2px;
     font-size: x-large;
+
+}
+nav a{
+    color: #fff;
+    padding: 1px 5px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: 0.9s;
+}
+nav a:hover{
+    border: 1px solid #fff;
 }
 
-.nav-menu a:hover {
-    text-decoration: underline;
+input[type="checkbox"] {
+    display: none;
+}
+nav label {
+    display: none;
+    border: 1px solid #fff;
+    padding: 2px 5px;
+    cursor: pointer;
+    transition: 0.9s;
+    margin: 20px;
+}
+nav label:hover{
+    color: #f00;
+    border: 1px solid #f00;
+}
+
+.telephone .tmp2{
+    display: none;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    nav {
+        text-align: left;
+    }
+    nav label{
+        display: inline-block;
+    }
+    nav > ul {
+        display: none;
+        left: 0;
+        height:auto;
+        width:8em;
+        background-color: black;
+
+    }
+    nav li{
+        display: block;
+        vertical-align: top;
+        padding: 5px;
+
+        font-size: large;
+    }
+    input[type="checkbox"]:checked ~ label + ul {
+        display: block;
+    }
+
+    .logo-img{
+        display: none;
+    }
+    header{
+        height: 100px;
+    }
+    .telephone .tmp {
+        display: none;
+    }
+
+    .telephone .tmp2{
+        display: block;
+    }
 }
 
 .telephone {
-    top: 15px;
-    right: 100px;
+    position: relative;
+    top: 20px;
+    right: 20px;
     padding: 10px;
     font-weight: bolder;
     font-size: 20px;
@@ -78,10 +128,13 @@ header .logo-img {
     text-decoration: none;
     color: white;
     list-style: none;
+    padding: 2px 5px;
+    border: 1px solid transparent;
+    transition: 0.9s;
 }
 
 .telephone a:hover {
-    text-decoration: underline;
+    border: 1px solid #fff;
 }
 
 main {

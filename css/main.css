@@ -6,13 +6,15 @@
 .backgroundImg {
     background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url("../img/newBackgroundMain.jpg") no-repeat;
     background-size: 100% 100%;
+    height: 900px;
 }
 
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     z-index: 999;
     text-align: justify;
@@ -137,42 +139,10 @@ nav label:hover{
     border: 1px solid #fff;
 }
 
+
 main {
     height: 810px;
 }
-
-.advantages{
-
-}
-
-.advantages > ul{
-    display: inline-flex;
-    margin: 50px;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.advantages > ul > li{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 400px;
-    margin: 30px;
-}
-
-.boats > a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-size: large;
-    color: black;
-}
-.boats > a:hover{
-    text-decoration: underline;
-}
-
 
 .main-text{
     display: flex;
@@ -193,145 +163,6 @@ main {
     margin: 20px 50px;
 }
 
-.boats > p{
-    position: relative;
-    text-align: center;
-    font-size: 30px;
-    margin: 10px;
-    color: blue;
-    font-weight: bolder;
-}
-
-.boats > ul > li{
-    display: inline-flex;
-    justify-content: center;
-    align-content: space-between;
-    margin: 10px;
-}
-
-.boats > li > p{
-    width: 300px;
-    height: 100px;
-}
-.boat-flex-item{
-    display: inline-flex;
-    flex-direction: column;
-    margin: 100px;
-}
-
-.routes > p{
-    position: relative;
-    text-align: center;
-    font-size: 30px;
-    margin: 10px;
-    color: blue;
-    font-weight: bolder;
-}
-
-.photo-routes{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.routes > a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-size: large;
-    color: black;
-}
-.routes > a:hover{
-    text-decoration: underline;
-}
-
-.events-cards{
-    display: flex;
-    justify-content: center;
-
-}
-
-.events-cards > li {
-    margin: 10px;
-    text-decoration: none;
-    list-style: none;
-}
-
-.events > p{
-    position: relative;
-    text-align: center;
-    font-size: 30px;
-    margin: 10px;
-    color: blue;
-    font-weight: bolder;
-}
-
-.events > a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-size: large;
-    color: black;
-}
-
-.events > a:hover{
-    text-decoration: underline;
-}
-
-.reviews > p{
-    position: relative;
-    text-align: center;
-    font-size: 30px;
-    margin: 10px;
-    color: blue;
-    font-weight: bolder;
-}
-.round{
-    width: 300px;
-    border-radius: 1000px; /* Радиус скругления */
-    border: 3px solid black; /* Параметры рамки */
-    box-shadow: 0 0 7px #666; /* Параметры тени */
-}
-
-.reviews-cards {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 40px;
-}
-
-.reviews-cards > li{
-    width: 350px;
-    list-style: none;
-}
-
-.reviews > a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-size: large;
-    color: black;
-}
-
-.reviews > a:hover{
-    text-decoration: underline;
-}
-
-.contacts-and-map{
-    display: flex;
-    margin: 10px;
-}
-
-.contacts-with-map {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-}
 
 .booking-form{
     display: flex;
@@ -390,6 +221,216 @@ input:focus{
 }
 
 
+.advantages > ul{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 50px;
+}
+
+.advantages > ul > li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    margin: 30px;
+}
+
+.boats{
+    background-color: rgb(249, 249, 249);
+    padding: 15px;
+}
+
+
+.boats > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: large;
+    color: black;
+}
+
+.boats > a:hover{
+    text-decoration: underline;
+}
+
+.boats > p{
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    margin: 10px;
+    color: blue;
+    font-weight: bolder;
+}
+
+.boats > ul > li{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 100px;
+    flex-wrap: wrap;
+}
+
+.boat-flex-item > p{
+    margin: 7px 0;
+}
+
+.boat-flex-item > h3{
+    justify-content: center;
+}
+
+.boat-flex-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    width: 350px;
+}
+
+.boat-flex-item > input{
+    margin-right: 100px;
+    margin-top: 50px;
+    font-size: 1.5em;
+    background-color: rgb(150, 201, 255, .3);;
+    border: 1px solid rgb(150, 201, 255, 1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 2px rgba(0,0,0,0.5),
+    0px 2px 4px rgba(0,0,0,0.1),
+    0px 4px 8px rgba(0,0,0,0.1),
+    0px 8px 16px rgba(0,0,0,0.1);
+}
+
+.boat-flex-item > input:hover{
+    transform: translateY(1px);
+    box-shadow: inset 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+}
+
+.routes{
+    padding: 15px;
+}
+
+.routes > p{
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    margin: 10px;
+    color: blue;
+    font-weight: bolder;
+}
+
+.photo-routes{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+.routes > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: large;
+    color: black;
+}
+.routes > a:hover{
+    text-decoration: underline;
+}
+
+.events{
+    padding: 15px;
+}
+
+.events-cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.events-cards > li {
+    margin: 10px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.events > p{
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    margin: 10px;
+    color: blue;
+    font-weight: bolder;
+}
+
+.events > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: large;
+    color: black;
+}
+
+.events > a:hover{
+    text-decoration: underline;
+}
+
+.reviews{
+    padding: 15px;
+    background-color: rgb(249, 249, 249);
+}
+
+.reviews > p{
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    margin: 10px;
+    color: blue;
+    font-weight: bolder;
+}
+.round{
+    width: 300px;
+    border-radius: 1000px; /* Радиус скругления */
+    border: 3px solid black; /* Параметры рамки */
+    box-shadow: 0 0 7px #666; /* Параметры тени */
+}
+
+.reviews-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.reviews-cards > li{
+    width: 350px;
+    list-style: none;
+}
+
+.reviews > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: large;
+    color: black;
+}
+
+.reviews > a:hover{
+    text-decoration: underline;
+}
+
+
+.contacts-with-map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 300px;
+}
 
 
 ::-webkit-input-placeholder { /* WebKit browsers */

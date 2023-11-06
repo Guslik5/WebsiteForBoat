@@ -307,6 +307,16 @@ input:focus{
 
 .routes{
     padding: 15px;
+    justify-content: center;
+}
+.photo-routes-cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.photo-routes-cards > li{
+    list-style: none;
 }
 
 .routes > p{
@@ -318,13 +328,6 @@ input:focus{
     font-weight: bolder;
 }
 
-.photo-routes{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-
-}
 
 .routes > a{
     display: flex;

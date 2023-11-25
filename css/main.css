@@ -577,3 +577,7 @@ th {
     text-align: left;
 }
 
+tr:nth-child(even) { background: #008bdb; }
+tr:nth-child(odd) { background: #00a2ff }
+tr:hover td {background: #8fd6ff;}
+

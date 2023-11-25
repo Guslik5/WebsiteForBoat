@@ -427,12 +427,18 @@ input:focus{
 }
 
 
-.contacts-with-map {
+.contacts-and-map {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
-    flex-wrap: wrap;
-    width: 300px;
+}
+
+.block-contacts-and-map{
+
+}
+.map{
+
 }
 
 
@@ -463,6 +469,7 @@ input:focus{
 
 footer {
     display: flex;
+    justify-content: space-between;
     position: absolute;
     left: 0;
     width: 100%;
@@ -483,16 +490,17 @@ footer .logo-img {
 }
 
 .contacts{
-    position: absolute;
-    padding: 10px;
-    bottom: 20px;
-    right: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .social-networks{
-    position: absolute;
+    min-width: fit-content;
+    max-width: 100%;
+    display: flex;
     padding: 10px;
-    right: 200px;
     bottom: 0;
     font-weight: lighter;
     font-size: small;
@@ -506,12 +514,11 @@ footer .logo-img {
 
 .social-icons a {
     position: relative;
-    display: inline-block;
+    display: inline-flex;
     transition: background-color .7s ease-in-out;
     width: 2.5rem;
     height: 2.5rem;
     border-radius: .5rem;
-    left: 5em;
 }
 
 .social-icons a:hover {
@@ -543,3 +550,30 @@ footer .logo-img {
 .social-icons .social-icon-whatsup::before {
     background-image: url("../img/icon-whatsUp.png");
 }
+
+
+
+.template-table-description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+table {
+    width: 800px;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 15px;
+    background-color: rgba(255,255,255,0.2);
+    color: #fff;
+}
+
+th {
+    text-align: left;
+}
+

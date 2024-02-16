@@ -31,7 +31,7 @@ if (page == "/boatWebsite/www/contacts.html"){
 }
 
 (function() {
-    let startTime = new Date().getTime();
+    let start = new Date().getTime();
 
     window.addEventListener('load', function(){
         var load = new Date().getTime() - start;

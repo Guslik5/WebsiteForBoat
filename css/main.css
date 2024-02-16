@@ -410,9 +410,10 @@ input:focus{
 }
 
 .reviews-cards > li{
-    width: 350px;
     list-style: none;
+
 }
+
 
 .reviews > a{
     display: flex;
@@ -579,4 +580,16 @@ th {
 tr:nth-child(even) { background: #008bdb; }
 tr:nth-child(odd) { background: #00a2ff }
 tr:hover td {background: #8fd6ff;}
+
+.block-reviews{
+    margin: 100px 30px;
+
+    color: white;
+}
+
+#form-reviews{
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+}
 

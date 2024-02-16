@@ -34,7 +34,7 @@ if (page == "/boatWebsite/www/contacts.html"){
     let startTime = new Date().getTime();
 
     window.addEventListener('load', function(){
-        var loadTime = new Date().getTime() - startTime;
+        var load = new Date().getTime() - start;
 
         var loadState = document.createElement('div');
         loadState.style.position = 'fixed';
@@ -42,7 +42,7 @@ if (page == "/boatWebsite/www/contacts.html"){
         loadState.style.left = '0';
         loadState.style.backgroundColor = 'white';
         loadState.style.color = 'black';
-        loadState.innerHTML = 'Страница загружена за ' + loadTime + ' мс';
+        loadState.innerHTML = 'Страница загружена за ' + load + ' мс';
 
         document.body.appendChild(loadState);
     });

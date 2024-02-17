@@ -6,20 +6,17 @@ window.addEventListener('DOMContentLoaded', function() {
     if (storedTable) {
         tableReviews.innerHTML = storedTable;
     }
+    // localStorage.clear()
 
-    formReviews.onsubmit = function (){
-        const name = document.getElementById('name').value;
-        const nameBoat = document.getElementById('nameBoat').value;
-        const nameCaptain = document.getElementById('nameCaptain').value;
-        const comment = document.getElementById('comment').value;
-        const rating = document.getElementById('rating').value;
+    formReviews.onsubmit = function (event){
+        event.preventDefault();
 
         let row = tableReviews.insertRow();
-        row.insertCell().textContent = name;
-        row.insertCell().textContent = nameBoat;
-        row.insertCell().textContent = nameCaptain;
-        row.insertCell().textContent = comment;
-        row.insertCell().textContent = rating;
+        row.insertCell().textContent = event.target[0].value;
+        row.insertCell().textContent = event.target[1].value;
+        row.insertCell().textContent = event.target[2].value;
+        row.insertCell().textContent = event.target[3].value;
+        row.insertCell().textContent = event.target[4].value;
 
         localStorage.setItem("Data", tableReviews.innerHTML);
     }

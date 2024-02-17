@@ -2,60 +2,264 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Аренда катера Спб</title>
+    <title>Аренда  Спб</title>
     <meta name="keywords" content="аренда, катер, яхта, спб, санкт-петербург ">
     <meta name="description" content="Аренда яхты в Санкт-Петербурге по выгодной цене!">
     <link rel="stylesheet" href="css/main.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
 </head>
-<body class="backgroundImg">
+<body>
 
-    <header>
-        <img class="logo-img" src="img/logo.png" alt="logo">
-        <ul  class="nav-menu">
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="boats.html">Катера</a></li>
-            <li><a href="routes.html">Маршруты</a></li>
-            <li><a href="events.html">Мероприятия</a></li>
-            <li><a href="reviews.html">Отзывы</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
+    <div class="backgroundImg">
+        <header id="header">
+            <img src="img/logo.png" class="logo-img">
+            <nav>
+                <input type="checkbox" name="menu" id="btn-menu" />
+                <label for="btn-menu">Меню</label>
+                <ul>
+                    <li id="button-main"><a href="index.html">Главная</a></li>
+                    <li id="button-boats"><a href="boats.html">Яхты</a></li>
+                    <li id="button-routes"><a href="routes.html">Маршруты</a></li>
+                    <li id="button-events"><a href="events.html">Мероприятия</a></li>
+                    <li id="button-reviews"><a href="reviews.html">Отзывы</a></li>
+                    <li id="button-contacts"><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+           <aside class="telephone">
+               <a  class="tmp" href="tel:8 (962) 684-51-99" title="позвоните нам"> 8 (962) 684-51-99</a>
+               <a class="tmp2" href="tel:8 (962) 684-51-99"><img src="img/phone-call.png" width="30px" alt="Кнопка «button»"></a>
+           </aside>
+        </header>
+        <main>
+            <div class="main-text">
+
+                <h1 class="main-text-item-one">Аренда круизной яхты <em>Sea Ray 240</em></h1>
+                <h3 class="main-text-item-two">Самые красивые прогулки по рекам и каналам Санкт-Петербурга. Причалы в разных точках города. Опытный капитан</h3>
+            </div>
+
+            <section class="booking-form">
+                <h2>Забронировать прогулку</h2>
+                <form action="#">
+                    <div class="input">
+                        <input class="input-name-phone" type="text" placeholder="Имя">
+                        <input class="input-name-phone" type="text" placeholder="Телефон">
+                    </div>
+                    <div class="input-date-button">
+                        <div class="input-date">
+                            <input class="input-date-time" type="text" placeholder="Выберите дату" onfocus="(this.type='date')" onblur="(this.type='text')" >
+                        </div>
+                        <div class="submit_button">
+                            <input class="input-date-time" type="submit" value="Отправить">
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <section class="advantages">
+        <ul>
+            <li>
+                <img src="img/advantages-new.png" width="200px">
+                <h3>Преимущество</h3>
+                <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias modi porro qui. Amet atque consequatur dolores eum fugiat id impedit ipsam ipsum iure laborum minus qui quidem rem, sequi sint?</h5>
+            </li>
+            <li>
+                <img src="img/advantages-new.png" width="200px">
+                <h3>Преимущество</h3>
+                <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias modi porro qui. Amet atque consequatur dolores eum fugiat id impedit ipsam ipsum iure laborum minus qui quidem rem, sequi sint?</h5>
+            </li>
+            <li>
+                <img src="img/advantages-new.png" width="200px">
+                <h3>Преимущество</h3>
+                <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias modi porro qui. Amet atque consequatur dolores eum fugiat id impedit ipsam ipsum iure laborum minus qui quidem rem, sequi sint?</h5>
+
+            </li>
         </ul>
-       <aside class="telephone">
-           <a href="tel:8 (962) 684-51-99"><p>Позвоните нам</p> 8 (962) 684-51-99</a>
-           <a class="telephone" href="https://vk.com/public211513707" title="call"></a>
-        </aside>
-    </header>
-    <main>
-        <h1>Аренда круизной яхты <em>Sea Ray 240</em></h1>
-        <section>
-            <strong>Самые красивые прогулки по рекам и каналам Санкт-Петербурга. Причалы в разных точках города. Опытный капитан</strong>
-        </section>
+    </section>
 
-        <section class="booking-form">
-            <h2>Забронировать прогулку</h2>
-            <form action="#">
-                <div class="input">
-                    <input type="text" placeholder="Имя">
-                    <input type="text" placeholder="Фамилия">
-                    <input type="text" placeholder="Телефон">
+    <section class="boats">
+        <p>Яхты</p>
+        <ul>
+            <li class="first-boat">
+                <img src="img/boat1.jpg" width="600">
+                <div class="boat-flex-item">
+                    <h3>Яхта номер 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium ad eaque inventore obcaecati recusandae rerum soluta suscipit. Aut eius ipsam nobis odio, quasi quidem quo vitae? Aspernatur, atque, autem!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto assumenda cupiditate, ea est laborum, magni non nulla optio quasi, qui quidem saepe veritatis? Distinctio, explicabo odit. Excepturi ipsam laboriosam voluptatem.</p>
+                    <input type="submit" value="Забронировать">
                 </div>
-                <div class="input-date-time">
-                    <label><span>Дата</span><input type="date" id="datepicker"></label>
+            </li>
+            <li class="second-boat">
+                <div class="boat-flex-item">
+                    <h3>Яхта номер 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae blanditiis labore officia repellat tempore temporibus totam velit voluptate! Accusamus corporis dolores error esse fuga id laborum non quidem reiciendis ut?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam beatae culpa ducimus et expedita facilis hic id incidunt itaque laborum laudantium magni minus modi molestiae mollitia, nulla perferendis ratione totam?</p>
+                    <input type="submit" value="Забронировать">
                 </div>
-                <div class="submit_button">
-                    <input type="submit" value="Отправить">
-                </div>
-            </form>
-        </section>
+                <img src="img/boat2.jpg" width="600">
+            </li>
+        </ul>
+        <a href="boats.html" >Все яхты</a>
 
-        <aside class="work-time">
-            работаем с мая по сентябрь
-        </aside>
+    </section>
 
-    </main>
+    <section class="routes">
+        <p>Маршруты</p>
+        <ul class="photo-routes-cards">
+            <li><img src="img/routes-one.jpg" width="300"></li>
+            <li><img src="img/routes-one.jpg" width="300"></li>
+            <li><img src="img/routes-one.jpg" width="300"></li>
+            <li><img src="img/routes-one.jpg" width="300"></li>
+            <li><img src="img/routes-one.jpg" width="300"></li>
+            <li><img src="img/routes-one.jpg" width="300"></li>
+            <li><img src="img/routes-one.jpg" width="300"></li>
+            <li><img src="img/routes-one.jpg" width="300"></li>
+        </ul>
+        <a href="routes.html" >Все маршруты</a>
+    </section>
+
+    <section class="events">
+        <p>Мероприятия</p>
+
+        <ul class="events-cards">
+            <li>
+                <img src="img/party.jpg" width="250">
+                <p>День рождения</p>
+                <ul>
+                    <li>кайф</li>
+                    <li>кайф</li>
+                    <li>кайф</li>
+                    <li>кайф</li>
+                    <li>кайф</li>
+                </ul>
+            </li>
+            <li>
+                <img src="img/party.jpg" width="250">
+                <p>День рождения</p>
+                <ul>
+                    <li>кайф</li>
+                    <li>кайф</li>
+                    <li>кайф</li>
+                    <li>кайф</li>
+                    <li>кайф</li>
+                </ul>
+            </li>
+            <li>
+                <img src="img/party.jpg" width="250">
+                <p>День рождения</p>
+                <ul>
+                    <li>кайф</li>
+                    <li>кайф</li>
+                    <li>кайф</li>
+                    <li>кайф</li>
+                    <li>кайф</li>
+                </ul>
+            </li>
+            <li>
+                <img src="img/party.jpg" width="250">
+                <p>День рождения</p>
+                <ul>
+                    <li>кайф</li>
+                    <li>кайф</li>
+                    <li>кайф</li>
+                    <li>кайф</li>
+                    <li>кайф</li>
+                </ul>
+            </li>
+        </ul>
+
+        <a href="routes.html" >Все мероприятия</a>
+    </section>
+
+
+    <section class="reviews">
+        <p>Отзывы</p>
+        <ul class="reviews-cards">
+            <li>
+                <img src="img/people-one.png" class="round">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci asperiores autem blanditiis, corporis cupiditate minima nulla, obcaecati, odio quos tempore unde vel voluptatem. Delectus dignissimos doloremque nesciunt quia rerum.</p>
+                <p>21.08.23📅</p>
+            </li>
+            <li>
+                <img src="img/people-one.png" class="round">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci asperiores autem blanditiis, corporis cupiditate minima nulla, obcaecati, odio quos tempore unde vel voluptatem. Delectus dignissimos doloremque nesciunt quia rerum.</p>
+                <p>21.08.23📅</p>
+            </li>
+            <li>
+                <img src="img/people-one.png" class="round">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci asperiores autem blanditiis, corporis cupiditate minima nulla, obcaecati, odio quos tempore unde vel voluptatem. Delectus dignissimos doloremque nesciunt quia rerum.</p>
+                <p>21.08.23📅</p>
+            </li>
+            <li>
+                <img src="img/people-one.png" class="round">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci asperiores autem blanditiis, corporis cupiditate minima nulla, obcaecati, odio quos tempore unde vel voluptatem. Delectus dignissimos doloremque nesciunt quia rerum.</p>
+                <p>21.08.23📅</p>
+            </li>
+            <li>
+                <img src="img/people-one.png" class="round">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci asperiores autem blanditiis, corporis cupiditate minima nulla, obcaecati, odio quos tempore unde vel voluptatem. Delectus dignissimos doloremque nesciunt quia rerum.</p>
+                <p>21.08.23📅</p>
+            </li>
+            <li>
+                <img src="img/people-one.png" class="round">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci asperiores autem blanditiis, corporis cupiditate minima nulla, obcaecati, odio quos tempore unde vel voluptatem. Delectus dignissimos doloremque nesciunt quia rerum.</p>
+                <p>21.08.23📅</p>
+            </li>
+            <li>
+                <img src="img/people-one.png" class="round">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci asperiores autem blanditiis, corporis cupiditate minima nulla, obcaecati, odio quos tempore unde vel voluptatem. Delectus dignissimos doloremque nesciunt quia rerum.</p>
+                <p>21.08.23📅</p>
+            </li>
+            <li>
+                <img src="img/people-one.png" class="round">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consectetur dicta dolore, ducimus eius inventore ipsum laborum nesciunt nulla odio perferendis provident quas qui ratione, repellat ut vero, voluptate voluptatum.</p>
+                <p>21.08.23📅</p>
+            </li>
+            <li>
+                <img src="img/people-one.png" class="round">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid cumque error explicabo perspiciatis vitae! Animi, commodi consequuntur dolores eius et expedita explicabo fugit illum ipsam nam non pariatur sequi sit!</p>
+                <p>21.08.23📅</p>
+            </li>
+        </ul>
+        <a href="routes.html" >Все отзывы</a>
+    </section>
+
+    <section class="contacts-and-map">
+        <img class="map" src="img/map.jpg" width="600">
+        <div class="block-contacts-and-map">
+            <p>телефон</p>
+            <p>почта</p>
+            <p>сети</p>
+            <p>адрес</p>
+        </div>
+    </section>
+
+    <div class="slider">
+        <div><h3>1</h3></div>
+        <div><h3>2</h3></div>
+        <div><h3>3</h3></div>
+        <div><h3>4</h3></div>
+        <div><h3>5</h3></div>
+        <div><h3>6</h3></div>
+    </div>
+
+
     <footer>
         <img class="logo-img" src="img/logo.png" alt="logo">
 
-
+        <div class="contacts">
+            <p>Name</p>
+            <p>8(962) 684 51-99</p>
+            <p>Круглосуточно</p>
+            <p>Санкт-Петербург 2023</p>
+        </div>
         <section class="social-networks">
             <ul class="social-icons">
                 <li><a class="social-icon-vk" href="https://vk.com/public211513707" title="VK"></a></li>
@@ -66,5 +270,8 @@
         </section>
 
     </footer>
+    <script src="js/main.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/slickSlider.js"></script>
 </body>
 </html>

@@ -1,41 +1,20 @@
 * {
     padding: 0;
     margin: 0;
-    border: 0;
-}
 
-@media (max-width: 900px){
-    .nav-menu {
-        flex-direction: column;
-        font-weight: lighter;
-        font-size: small;
-    }
-    header aside a{
-        opacity: 0;
-    }
-    .telephone {
-        background-image: url("../img/call.png");
-        background-size: 50px;
-        background-repeat: no-repeat;
-        background-position: top center;
-    }
 }
-
 .backgroundImg {
     background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url("../img/newBackgroundMain.jpg") no-repeat;
-    background-size: 100% 27%;
+    background-size: 100% 100%;
+    height: 900px;
 }
 
-html {
-    height: 3000px;
-    width: auto;
-
-
-}
 header {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     z-index: 999;
     text-align: justify;
@@ -50,30 +29,98 @@ header .logo-img {
     background:  rgba(0, 0, 0, 0);
 }
 
-.nav-menu {
-    display: flex;
+
+nav{
+    padding: 20px 5px;
+    color: #fff;
+}
+
+nav li{
+    display: inline-flex;
     justify-content: space-between;
-    align-items: center;
-    width: 1000px;
-    list-style: none;
-    margin: 0;
-
-}
-
-.nav-menu a {
-    text-decoration: none;
-    color: black;
-    font-weight: bolder;
+    vertical-align: center;
+    padding: 2px;
     font-size: x-large;
+
+}
+nav a{
+    color: #fff;
+    padding: 1px 5px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: 0.9s;
+}
+nav a:hover{
+    border: 1px solid #fff;
 }
 
-.nav-menu a:hover {
-    text-decoration: underline;
+input[type="checkbox"] {
+    display: none;
+}
+nav label {
+    display: none;
+    border: 1px solid #fff;
+    padding: 2px 5px;
+    cursor: pointer;
+    transition: 0.9s;
+    margin: 20px;
+}
+nav label:hover{
+    color: #f00;
+    border: 1px solid #f00;
+}
+
+.telephone .tmp2{
+    display: none;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    nav {
+        text-align: left;
+    }
+    nav label{
+        display: inline-block;
+    }
+    nav > ul {
+        display: none;
+        left: 0;
+        height:auto;
+        width:8em;
+        background-color: black;
+
+    }
+    nav li{
+        display: block;
+        vertical-align: top;
+        padding: 5px;
+
+        font-size: large;
+    }
+    input[type="checkbox"]:checked ~ label + ul {
+        display: block;
+    }
+
+    .logo-img{
+        display: none;
+    }
+    header{
+        height: 100px;
+    }
+    .telephone .tmp {
+        display: none;
+    }
+
+    .telephone .tmp2{
+        display: block;
+    }
 }
 
 .telephone {
-    top: 15px;
-    right: 100px;
+    position: relative;
+    top: 20px;
+    right: 20px;
     padding: 10px;
     font-weight: bolder;
     font-size: 20px;
@@ -84,26 +131,332 @@ header .logo-img {
     text-decoration: none;
     color: white;
     list-style: none;
+    padding: 2px 5px;
+    border: 1px solid transparent;
+    transition: 0.9s;
 }
 
 .telephone a:hover {
-    text-decoration: underline;
+    border: 1px solid #fff;
 }
+
 
 main {
-    height: 2500px;
+    height: 810px;
 }
 
+.main-text{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 150px;
+    left: 40px;
+    color: white;
+    margin: 15px;
+}
+
+.main-text-item-one{
+    width: 300px;
+    margin: 10px 50px;
+}
+.main-text-item-two{
+    width: 450px;
+    margin: 20px 50px;
+}
+
+
 .booking-form{
-    display: inline-flex;
-    color: black;
-    width: 600px;
-    box-shadow: inset 0 0 0 1000px rgba(255,255,255,.1);
+    display: flex;
+    position: absolute;
+    margin: 25px;
+    right: 0;
+    padding: 2em;
+    top: 450px;
+    color: white;
+    width: 450px;
+    height: 300px;
+    flex-direction: column;
+
+}
+
+.booking-form > h2{
+    font-size: 30px;
 }
 
 .input{
+    display: inline-flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.input-name-phone{
+    margin: 10px;
+    width: 300px;
+    height: 40px;
+    color: white;
+    background-color: rgb(150, 201, 255, .3);;
+    border: 1px solid rgb(150, 201, 255, 1);
+    border-radius: 10px;
+    padding: 3px 20px;
+    font-size: 20px;
+}
+
+.input-date-button{
+    display: inline-flex;
+}
+
+.input-date-time{
+    margin: 10px;
+    width: 150px;
+    height: 45px;
+    color: white;
+    background-color: rgb(150, 201, 255, .3);;
+    border: 1px solid rgb(150, 201, 255, 1);
+    border-radius: 10px;
+    padding: 3px 20px;
+    font-size: 20px;
+}
+
+input:focus{
+    background-color: rgb(150, 201, 255, 0);
+}
+
+
+.advantages > ul{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 50px;
+}
+
+.advantages > ul > li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    margin: 30px;
+}
+
+.boats{
+    background-color: rgb(249, 249, 249);
+    padding: 15px;
+}
+
+
+.boats > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: large;
+    color: black;
+}
+
+.boats > a:hover{
+    text-decoration: underline;
+}
+
+.boats > p{
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    margin: 10px;
+    color: blue;
+    font-weight: bolder;
+}
+
+.boats > ul > li{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 100px;
+    flex-wrap: wrap;
+}
+
+.boat-flex-item > p{
+    margin: 7px 0;
+}
+
+.boat-flex-item > h3{
+    justify-content: center;
+}
+
+.boat-flex-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    width: 350px;
+}
+
+.boat-flex-item > input{
+    margin-right: 100px;
+    margin-top: 50px;
+    font-size: 1.5em;
+    background-color: rgb(150, 201, 255, .3);;
+    border: 1px solid rgb(150, 201, 255, 1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 2px rgba(0,0,0,0.5),
+    0px 2px 4px rgba(0,0,0,0.1),
+    0px 4px 8px rgba(0,0,0,0.1),
+    0px 8px 16px rgba(0,0,0,0.1);
+}
+
+.boat-flex-item > input:hover{
+    transform: translateY(1px);
+    box-shadow: inset 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+}
+
+.routes{
+    padding: 15px;
+    justify-content: center;
+}
+.photo-routes-cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.photo-routes-cards > li{
+    list-style: none;
+}
+
+.routes > p{
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    margin: 10px;
+    color: blue;
+    font-weight: bolder;
+}
+
+
+.routes > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: large;
+    color: black;
+}
+.routes > a:hover{
+    text-decoration: underline;
+}
+
+.events{
+    padding: 15px;
+}
+
+.events-cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 
 }
+
+.events-cards > li {
+    margin: 10px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.events > p{
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    margin: 10px;
+    color: blue;
+    font-weight: bolder;
+}
+
+.events > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: large;
+    color: black;
+}
+
+.events > a:hover{
+    text-decoration: underline;
+}
+
+.reviews{
+    padding: 15px;
+    background-color: rgb(249, 249, 249);
+}
+
+.reviews > p{
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    margin: 10px;
+    color: blue;
+    font-weight: bolder;
+}
+.round{
+    width: 300px;
+    border-radius: 1000px; /* Радиус скругления */
+    border: 3px solid black; /* Параметры рамки */
+    box-shadow: 0 0 7px #666; /* Параметры тени */
+}
+
+.reviews-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.reviews-cards > li{
+    list-style: none;
+
+}
+
+
+.reviews > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: large;
+    color: black;
+}
+
+.reviews > a:hover{
+    text-decoration: underline;
+}
+
+
+.contacts-and-map {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.block-contacts-and-map{
+
+}
+.map{
+
+}
+
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    white;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    white;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    white;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    white;
+}
+
 
 .work-time{
     position: absolute;
@@ -116,6 +469,7 @@ main {
 
 footer {
     display: flex;
+    justify-content: space-between;
     position: absolute;
     left: 0;
     width: 100%;
@@ -136,16 +490,17 @@ footer .logo-img {
 }
 
 .contacts{
-    position: absolute;
-    padding: 10px;
-    bottom: 20px;
-    right: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .social-networks{
-    position: absolute;
+    min-width: fit-content;
+    max-width: 100%;
+    display: flex;
     padding: 10px;
-    right: 200px;
     bottom: 0;
     font-weight: lighter;
     font-size: small;
@@ -159,12 +514,11 @@ footer .logo-img {
 
 .social-icons a {
     position: relative;
-    display: inline-block;
+    display: inline-flex;
     transition: background-color .7s ease-in-out;
     width: 2.5rem;
     height: 2.5rem;
     border-radius: .5rem;
-    left: 5em;
 }
 
 .social-icons a:hover {
@@ -196,3 +550,46 @@ footer .logo-img {
 .social-icons .social-icon-whatsup::before {
     background-image: url("../img/icon-whatsUp.png");
 }
+
+
+
+.template-table-description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+table {
+    width: 800px;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 15px;
+    background-color: rgba(255,255,255,0.2);
+    color: #fff;
+}
+
+th {
+    text-align: left;
+}
+
+tr:nth-child(even) { background: #008bdb; }
+tr:nth-child(odd) { background: #00a2ff }
+tr:hover td {background: #8fd6ff;}
+
+.block-reviews{
+    margin: 100px 30px;
+
+    color: white;
+}
+
+#form-reviews{
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+}
+

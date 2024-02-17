@@ -9,38 +9,60 @@
 </head>
 <body class="backgroundImg">
 <header>
-    <img class="logo-img" src="img/logo.jpg">
-    <div class="nav-menu">
+    <img src="img/logo.png" class="logo-img">
+    <nav>
+        <input type="checkbox" name="menu" id="btn-menu"/>
+        <label for="btn-menu">Меню</label>
         <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="boats.html">О нас</a></li>
-            <li><a href="events.html">Цены</a></li>
-            <li><a href="reviews.html">Отзывы</a></li>
-            <li><a href="routes.html">Где нас найти</a></li>
+            <li id="button-main"><a href="index.html">Главная</a></li>
+            <li id="button-boats"><a href="boats.html">Яхты</a></li>
+            <li id="button-routes"><a href="routes.html">Маршруты</a></li>
+            <li id="button-events"><a href="events.html">Мероприятия</a></li>
+            <li id="button-reviews"><a href="reviews.html">Отзывы</a></li>
+            <li id="button-contacts"><a href="contacts.html">Контакты</a></li>
         </ul>
-    </div>
+    </nav>
     <aside class="telephone">
-        <i>8 (962) 684-51-99</i>
-        <a href="#">Заказать обратный звонок</a>
+        <a class="tmp" href="tel:8 (962) 684-51-99" title="позвоните нам"> 8 (962) 684-51-99</a>
+        <a class="tmp2" href="tel:8 (962) 684-51-99"><img src="img/phone-call.png" width="30px"
+                                                          alt="Кнопка «button»"></a>
     </aside>
 </header>
 <main>
+    <div class="block-reviews">
+        <h3 style="padding-left: 20px">Оставить отзыв о прогулке:</h3>
+        <form id="form-reviews">
+            <input class="input-name-phone" placeholder="Имя" type="text" id="name" name="name" required>
+            <input class="input-name-phone" placeholder="Название яхты" type="text" id="nameBoat" name="nameBoat"
+                   required>
+            <input class="input-name-phone" placeholder="Имя капитана" type="text" id="nameCaptain" name="nameCaptain"
+                   required>
+            <input class="input-name-phone" placeholder="Комментарий" type="text" id="comment" name="comment" required>
+            <input class="input-name-phone" placeholder="Оценка" type="number" id="rating" name="rating" min="1"
+                   max="10" required><br>
 
+            <div class="submit_button">
+                <input class="input-date-time" type="submit" value="Отправить">
+            </div>
+        </form>
 
-    <h1>Отзывы</h1>
+        <div id="reviews">
+            <table style="margin: 1% 7%" id="reviews-table">
+                <tr class="reviews-table__header">
+                    <th>Имя</th>
+                    <th>Название яхты</th>
+                    <th>Имя капитана</th>
+                    <th>Комментарий</th>
+                    <th>Оценка</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
 </main>
 <footer>
-    <img class="logo-img" src="img/logo.jpg" alt="logo">
+    <img class="logo-img" src="img/logo.png" alt="logo">
 
-    <section class="nav-menu-footer">
-        <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="boats.html">О нас</a></li>
-            <li><a href="events.html">Цены</a></li>
-            <li><a href="reviews.html">Отзывы</a></li>
-            <li><a href="routes.html">Где нас найти</a></li>
-        </ul>
-    </section>
     <section class="social-networks">
         <ul class="social-icons">
             <li><a class="social-icon-vk" href="https://vk.com/public211513707" title="VK"></a></li>
@@ -51,4 +73,8 @@
     </section>
 
 </footer>
+<script src="js/main.js"></script>
+<script src="js/reviews.js"></script>
+<script src="js/scroll.js"></script>
 </body>
+</html>
